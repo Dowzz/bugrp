@@ -25,12 +25,21 @@ Route::get('accueil', function () {
 Route::get('admin', function () {
     return view('administration/admin');
 });
+Route::get('bannable', function () {
+    return view('administration/bannable');
+});
+
+
+
+
 
 
 
 
 //Function Road
 
-Route::post('/recorddemande', 'demande_whitelist@record_dem');
-Route::post('/ajout_whitelist', 'demande_whitelist@ajout_whitelist');
-Route::post('/refus_whitelist', 'demande_whitelist@refus_whitelist');
+Route::post('/recorddemande', 'controle_whitelist@record_dem');
+Route::post('/ajout_whitelist', 'controle_whitelist@ajout_whitelist');
+Route::post('/refus_whitelist', 'controle_whitelist@refus_whitelist');
+Route::get('steamlogin', 'SteamController@steamlogin');
+Route::post('/banvalide', 'controle_whitelist@ban_steamid');

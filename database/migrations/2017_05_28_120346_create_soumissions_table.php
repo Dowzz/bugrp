@@ -20,7 +20,7 @@ class CreateSoumissionsTable extends Migration
             $table->string('nom');
             $table->text('description');
             $table->text('reason');
-            $table->rememberToken();
+            $table->string('steamid')->default('0');
             $table->timestamps();
         });
     }

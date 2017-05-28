@@ -7716,15 +7716,15 @@ body {
 .sidebar {
   list-style-type: none;
   background-color: #333;
-  width: 230px;
+  width: 130px;
   height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
   text-align: left;
-  position: absolute;
+  position: fixed;
   margin: 0;
-  padding: 0;
+  padding: 50px 0 0 0;
   list-style: none;
   transition: 1s ease;
 }

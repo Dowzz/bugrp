@@ -18,6 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('username')->default('0');
+            $table->string('steamid')->default('0');
+            $table->string('avatar')->default('0');
             $table->integer('admin')->default('0');
             $table->integer('whitelist')->default('0');
             $table->rememberToken();

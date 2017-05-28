@@ -14,12 +14,11 @@ class CreateCharactersTable extends Migration
     public function up()
     {
         Schema::create('characters', function (Blueprint $table) {
-            $table->integer('user_id');
+            $table->string('steamid');
             $table->increments('id');
             $table->string('prenom');
             $table->string('nom');
             $table->text('description');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

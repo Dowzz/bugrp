@@ -84,7 +84,6 @@
             </div>
         </nav>
         <ul class="sidebar">
-      <li class="sidebar-brand"><a href=""></a></li>
       <?php
        if (Auth::user()) {
           if ($admin==1) {?>

@@ -25,12 +25,7 @@ Route::get('accueil', function () {
 Route::get('admin', function () {
     return view('administration/admin');
 });
-Route::get('requete', function () {
-    return view('admin/requetes');
-});
-Route::get('valides', function () {
-    return view('admin/valides');
-});
+
 
 
 

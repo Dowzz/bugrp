@@ -16,7 +16,7 @@ if ($whitelist==0) {
 			</br></br>
 		<li><textarea rows="4" cols="50" id="description" placeholder="Description rp"></textarea></li>
 		</br></br>
-		<li><textarea rows="4" cols="50" id="reason" placeholder="Dites nous en quelques mots pourquoi nous devrions valider votre candidature"></textarea></li>
+		<li><textarea rows="4" cols="50" id="reason" placeholder="Dites nous en quelques mots pourquoi nous devrions valider votre candidature"> </textarea></li>
 		</ul>
 		<button class="btn btn-elegant btn-sm" id="envoi_soumission" type="submit">Envoyer ma demande</button>
 <?php

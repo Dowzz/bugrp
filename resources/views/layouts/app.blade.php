@@ -1,8 +1,7 @@
 <?php
     use App\user;
     $user = (Auth::user());
-    $whitelist=$user->whitelist;
-    $admin=$user->admin;
+    $admin=$user['admin'];
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,12 +86,14 @@
         <ul class="sidebar">
       <li class="sidebar-brand"><a href=""></a></li>
       <?php
-      if ($admin==1) {?>
-      <li class="ajax"><a href="admin">Administration</a></li>
-      <?php
-      }?>
-      <li class="ajax"><a href="accueil">Accueil</a></li>
-      </ul>
+       if (Auth::user()) {
+          if ($admin==1) {?>
+        <li class="ajax"><a href="admin">Administration</a></li>
+        <?php
+        }
+        }?>
+        <li class="ajax"><a href="accueil">Accueil</a></li>
+        </ul>
         @yield('content')
     </div>
     <!-- Scripts -->

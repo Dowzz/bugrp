@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\soumission;
 use App\user;
 use App\character;
+use App\ban;
 
 class controle_whitelist extends Controller
 {
@@ -48,5 +49,9 @@ class controle_whitelist extends Controller
         $user = user::where('steamid',$steamid)->first();
         $user->whitelist = '0';
         $user->save();
+        $ban = new ban;
+        $ban->steamid = $request->steamid;
+        $ban->reason = $request->reason;
+        $ban->save();
     }
 }

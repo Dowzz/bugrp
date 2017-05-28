@@ -14,16 +14,17 @@ $char = character::where('steamid', $_GET["Id"])->first();
 <input type="text" placeholder="<?php echo $user->email ?>" disabled>
 </div>
 </br></br>
-<div class="row"><textarea name="banreason" placeholder="Motif du ban" id="banreason" cols="30" rows="10"></textarea></div>
+<div class="row"><textarea placeholder="Motif du ban" id="banreason" cols="30" rows="10"></textarea></div>
 <button class="banvalide">Valider le ban</button>
 </br></br>
 <script>
 	$('.banvalide').click(function()
 	    {  
 	        var steamid=$("#steamid").val();
+	        var reason=$("#banreason").val();
 	        console.log(description);
 	            $.ajax({
-	            data:({steamid}),
+	            data:({steamid, reason}),
 	            type:"post",
 	            url: "/banvalide",
 	            success: function(msg){

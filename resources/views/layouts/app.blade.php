@@ -90,9 +90,12 @@
         <li class="ajax"><a href="admin">Administration</a></li>
         <?php
         }
-        }?>
+        ?>
         <li class="ajax"><a href="accueil">Accueil</a></li>
         </ul>
+        <?php 
+    }
+    ?>
         @yield('content')
     </div>
     <!-- Scripts -->
@@ -100,3 +103,4 @@
     
 </body>
 </html>
+

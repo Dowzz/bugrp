@@ -65,7 +65,7 @@
 					   	$steamid = $whitelisted->steamid;
 					   	$char= character::where('steamid', $steamid)->first();
 					   	?>
-					   	<tr class="lignerequete" value="{{$sub->id}}">
+					   	<tr class="lignerequete" value="{{$char->steamid}}">
 					       <td class="colonne_req">{{ $whitelisted->email }}</td>
 					       <td class="colonne_req">{{ $whitelisted->username }}</td>
 					       <td class="colonne_req">{{ $whitelisted->steamid }}</td>
